@@ -1,0 +1,7 @@
+#wolf {
+	width: 153px;
+	height: 108px;
+	position: absolute;
+	transition: left 1s linear, opacity 1s linear;
+	background-image: url(./sprite.gif);
+}

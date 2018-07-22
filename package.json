@@ -1,0 +1,45 @@
+{
+  "name": "appjstest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node_modules\\.bin\\electron index.js",
+    "build": "node_modules\\.bin\\electron index.js",
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "start": "http-server",
+    "webpack": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "appjs": "0.0.20",
+    "appjs-win32": "0.0.19",
+    "electron": "^1.8.4",
+    "express": "^4.16.3",
+    "fontfaceobserver": "^2.0.13",
+    "phaser": "^2.6.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "css-js-loader": "^0.4.1",
+    "css-loader": "^0.28.11",
+    "electron-packager": "^12.0.2",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "json-loader": "^0.5.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.1",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  }
+}

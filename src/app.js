@@ -10,6 +10,11 @@ const notificationSound = require('./quest/notification.mp3')
 import questJson from './quest/quests/quest.1984.js'
 require('./main.css')
 
+//initialization files
+require('./index.html');
+require('./phaser.min.js');
+require('./script.js');
+
 var mountainsLocation;
 var forestLocation;
 var map;

@@ -45,13 +45,33 @@
             }]
         },
         {
-            test: /\.(gif|png|jp(e*)g|mp3|wav|svg)$/,  
+            test: /\.(gif|png|jp(e*)g|svg)$/,  
             use: [{
                 loader: 'url-loader',
                 options: { 
                     limit: 100000, // Convert images < 8kb to base64 strings
                     name: 'images/[hash]-[name].[ext]'
                 } 
+            }]
+        },
+        {
+            test: /\.(mp3|wav)$/,  
+            use: [{
+                loader: 'url-loader',
+                options: { 
+                    limit: 100000, // Convert images < 8kb to base64 strings
+                    name: 'sounds/[hash]-[name].[ext]'
+                } 
+            }]
+        },
+        //initialization files
+        {
+            test: /(index\.html|phaser\.min\.js|script\.js)/,  
+            use: [{
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]'
+                }
             }]
         },
         {

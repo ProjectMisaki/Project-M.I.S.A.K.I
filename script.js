@@ -11,7 +11,7 @@ const {app, BrowserWindow} = require('electron')
     win = new BrowserWindow({
       width: 1000,
       height: 800,
-      fullscreen: true,
+      fullscreen: false,
       icon: './misaki.ico',
       title: 'Misaki',
       resizable: false,
@@ -21,7 +21,7 @@ const {app, BrowserWindow} = require('electron')
   
     // and load the index.html of the app.
     win.loadURL(url.format({
-      pathname: path.join(__dirname, 'index.html'),
+      pathname: path.join(__dirname, './build/index.html'),
       protocol: 'file:',
       slashes: true
     }))

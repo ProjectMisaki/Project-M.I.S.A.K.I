@@ -1,28 +1,27 @@
 {
-  "name": "appjstest",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+ "name": "misaki",
+ "productName": "Misaki",
+ "version": "0.1.0",
+ "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "node_modules\\.bin\\electron index.js",
     "build": "node_modules\\.bin\\electron index.js",
     "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
     "start": "http-server",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "package-mac": "electron-packager ./build --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . misaki  --overwrite --asar=true --platform=win32 --arch=x64 --icon=misaki.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Misaki\"",    
+    "package-linux": "electron-packager ./build misaki --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "appjs": "0.0.20",
-    "appjs-win32": "0.0.19",
-    "electron": "^1.8.4",
-    "express": "^4.16.3",
     "fontfaceobserver": "^2.0.13",
-    "phaser": "^2.6.2",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "electron": "^1.8.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",

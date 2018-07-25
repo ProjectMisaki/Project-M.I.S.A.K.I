@@ -66,7 +66,7 @@
         },
         //initialization files
         {
-            test: /(index\.html|phaser\.min\.js|script\.js)/,  
+            test: /(index\.html|phaser\.min\.js)/,  
             use: [{
                 loader: 'file-loader',
                 options: {

@@ -13,7 +13,6 @@ require('./main.css')
 //initialization files
 require('./index.html');
 require('./phaser.min.js');
-require('./script.js');
 
 var mountainsLocation;
 var forestLocation;
